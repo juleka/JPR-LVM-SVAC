@@ -17,7 +17,7 @@ output/SVAC-main.csv: \
 		src/read-in-SVAC.R \
 		input/SVAC_2_180525.csv \
 		hand/uncode_conflict_years.csv \
-		src/Makefile
+		Makefile
 	Rscript --vanilla $< \
 		--input=input/SVAC_2_180525.csv \
 		--fix_conflict_yrs=hand/uncode_conflict_years.csv \
