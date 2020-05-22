@@ -7,9 +7,6 @@
 
 library(argparse)
 
-# arguments <- list(input="~/Dropbox/SVAC2_0_timetrends/code/import/input/SVAC_2_180525.csv",
-#                   fix_conflict_yrs="~/Dropbox/SVAC2_0_timetrends/code/import/hand/uncode_conflict_years.csv")
-
 parser <- ArgumentParser()
 parser$add_argument("--input", type="character")
 parser$add_argument("--fix_conflict_yrs", type="character")
@@ -19,7 +16,7 @@ arguments <- parser$parse_args()
 data <- read.csv(arguments$input, header=TRUE, sep='|', stringsAsFactors = FALSE)
 
 ## ---------------------------
-## lets do some data cleaning
+## some data cleaning
 ## ---------------------------
 
 ## set missing data in prevalence vars to NA
