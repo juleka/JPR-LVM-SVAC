@@ -1,0 +1,1 @@
+Our article uses the May 2018 version of the Sexual Violence in Armed Conflict Data (SVAC). Newer versions of the SVAC data can be found <a href="http://www.sexualviolencedata.org/" target="_blank">here</a>.
