@@ -1,5 +1,6 @@
-In this data cleaning step, we prepare the SVAC data for analysis.
+In this pre-processing step, we prepare the SVAC data for analysis.
 
-The cleaning steps include:
-* [fix-conflict-types.R] coding internationalized intrastate conflicts as "intrastate"
+The performed cleaning steps include:
+* _[fix-types.R]_: code internationalized intrastate conflicts as INTRA, make
+  all actors in INTERstate conflicts of type STATE
 * 

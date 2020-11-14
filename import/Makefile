@@ -8,19 +8,17 @@
 .PHONY: all clean
 
 all: \
-		output/SVAC-main.csv
+		output/SVAC-imported.csv
 
 clean:
 	rm -f output/*
 
-output/SVAC-main.csv: \
+output/SVAC-imported.csv: \
 		src/read-in-SVAC.R \
 		input/SVAC_2_180525.csv \
-		hand/uncode_conflict_years.csv \
 		Makefile
 	Rscript --vanilla $< \
-		--input=input/SVAC_2_180525.csv \
-		--fix_conflict_yrs=hand/uncode_conflict_years.csv \
-		--output=$@
+		--inputfile=input/SVAC_2_180525.csv \
+		--outputfile=$@
 
 #end.
