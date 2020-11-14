@@ -35,6 +35,7 @@ print("Recoding ACTOR type variable for INTERstate conflicts:")
 print("in INTERstate conflicts, the actors are always of type state")
 data$actor_type <- ifelse(data$conflict_type=='inter', 1, data$actor_type)
 table(data[data$conflict_type=='inter', 'actor_type'])
+stopifnot(unique(sort(data[data$conflict_type=='inter', 'actor_type']))==c(1))
 
 write.table(data, file=arguments$outputfile, sep='|', row.names = FALSE)
 #end of script.
