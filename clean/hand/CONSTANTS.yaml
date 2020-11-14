@@ -4,37 +4,35 @@ N_unique_conflicts: 168
 
 N_unique_obs_years: 27
 
-fix_actor_country_names:
+fix_names:
+  Australia, Iraq, United Kingdom, United States of America: Iraq
   Bosnia-Herzegovina: Bosnia and Herzegovina
+  Cambodia (Kampuchea): Cambodia
+  Cambodia (Kampuchea), Thailand: Cambodia
+  Cameroon, Nigeria: Cameroon
   Congo: Congo, Rep.
   Democratic Republic of Congo (Zaire): Congo, Dem. Rep.
+  Djibouti, Eritrea: Djibouti
   DR Congo (Zaire): Congo, Dem. Rep.
+  Ecuador, Peru: Peru
   Egypt: Egypt, Arab Rep.
-  Cambodia (Kampuchea): Cambodia
+  Eritrea, Ethiopia: Ethiopia
+  India, Pakistan: India
   Iran: Iran, Islamic Rep.
+  Iraq, Kuwait: Kuwait
   Ivory Coast: Cote d'Ivoire
   Laos: Lao PDR
   Macedonia: Macedonia, FYR
   Myanmar (Burma): Myanmar
+  Panama, United States of America: Panama
   Russia (Soviet Union): Russian Federation
   Serbia (Yugoslavia): Serbia
+  South Sudan, Sudan: South Sudan
   Sri Lanka (Ceylon): Sri Lanka
   Syria: Syrian Arab Republic
   United States of America: United States
   Venezuela: Venezuela, RB
   Yemen: Yemen, Rep.
   Yemen (North Yemen): Yemen, Rep.
-
-fix_conflict_names:
-  Australia, Iraq, United Kingdom, United States of America: Iraq
-  Panama, United States of America: Panama
-  Iraq, Kuwait: Kuwait
-  India, Pakistan: India
-  Cambodia (Kampuchea), Thailand: Cambodia
-  Ecuador, Peru: Peru
-  Cameroon, Nigeria: Cameroon
-  Eritrea, Ethiopia: Ethiopia
-  Djibouti, Eritrea: Djibouti
-  South Sudan, Sudan: South Sudan
 
 #end of CONSTANTS.
