@@ -5,4 +5,4 @@ The performed cleaning steps include:
   all actors in INTERstate conflicts of type STATE
 * __[uncode-conflict-years.R]__: recode SVAC conflict years as 'not
 conflict' if not listed in UCDP/PRIO data as a conflict year
-
+* __[update-var-values.R]__: update conflict/actor country names from hand/CONSTANTS.yaml
