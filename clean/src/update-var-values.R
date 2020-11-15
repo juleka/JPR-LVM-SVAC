@@ -29,7 +29,6 @@ data$actor_country <- ifelse(data$conflict_type=='inter', data$actor, data$actor
 
 data$conflict_country <- data$country
 
-
 ##cleaning function
 update_from_CONSTANTS <- function(var_name, CONSTANTS_name) {
   for (i in names(CONSTANTS[[CONSTANTS_name]])) {
@@ -44,9 +43,6 @@ data$actor_country <- update_from_CONSTANTS('actor_country', 'fix_names')
 data$conflict_country <- update_from_CONSTANTS('conflict_country', 'fix_names')
 
 print(str(data))
-data[data$conflictid_new==283, c('year', 'actor', 'country', 'conflict_name', 'conflict_country', 'actor_country')]
-data[data$conflictid_new==439, c('year', 'actor', 'country', 'conflict_name', 'conflict_country', 'actor_country')]
-
 
 write.table(data, file=arguments$outputfile, sep='|', row.names = FALSE)
 #End of script.
