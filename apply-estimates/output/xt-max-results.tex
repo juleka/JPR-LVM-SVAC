@@ -1,0 +1,41 @@
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{l c c c }
+\hline
+ & Observed Lag & Static Latent Lag & Dynamic Latent Lag \\
+\hline
+y$>$=1                  & $1.700^{***}$ & $0.986^{***}$ & $1.400^{***}$ \\
+                        & $(0.074)$     & $(0.065)$     & $(0.082)$     \\
+y$>$=2                  & $3.610^{***}$ & $2.458^{***}$ & $2.870^{***}$ \\
+                        & $(0.124)$     & $(0.095)$     & $(0.114)$     \\
+y$>$=3                  & $5.206^{***}$ & $3.672^{***}$ & $4.082^{***}$ \\
+                        & $(0.184)$     & $(0.140)$     & $(0.156)$     \\
+Observed max value, lag & $1.891^{***}$ &               &               \\
+                        & $(0.080)$     &               &               \\
+Static  latent, lag     &               & $1.074^{***}$ &               \\
+                        &               & $(0.078)$     &               \\
+Dynamic latent, lag     &               &               & $1.082^{***}$ \\
+                        &               &               & $(0.079)$     \\
+\hline
+log-Likelihood          & -1221.260     & -1399.577     & -1400.741     \\
+Num. obs.               & 1748          & 1748          & 1748          \\
+Corr. obs x predicted   & 0.488         & 0.291         & 0.291         \\
+Corr. p-value           & 0.000         & 0.000         & 0.000         \\
+\hline
+\multicolumn{4}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$, $^{\cdot}p<0.1$}}
+\end{tabular}
+\caption{\emph{Maximum observed value}: Ordinal logistic regression using the maximum observed
+       value across the three human rights 
+       indicators as dependent variable. In the first model (``Observed Lag''), the predictor is a 1-year lag
+       of the observed maximum value response variable. In the second model (``Static Latent Lag''), the predictor is a 1-year
+       lag of the static estimates of SVAC prevalence, using a multiple imputation procedure that averages across 1,000 draws
+        from the posterior distribution to account for the statistical uncertainty in the LVM estimates. 
+       In the third model (``Dynamic Latent Lag''), the predictor is a 1-yar lag of the dynamic latent 
+       estimates of SVAC prevalence, also using a multiple imputation procedure that averages across 1,000 draws. To assess
+       model performance, we compare the log-Likelihood across models, as well as, the Spearman rank
+       correlation coefficients between the dependent variable and the predicted values of each regression
+       model.}
+\label{xt-max}
+\end{center}
+\end{table}

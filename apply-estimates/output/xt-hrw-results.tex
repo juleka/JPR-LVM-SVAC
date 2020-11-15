@@ -1,0 +1,40 @@
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{l c c c }
+\hline
+ & Observed Lag & Static Latent Lag & Dynamic Latent Lag \\
+\hline
+y$>$=1                & $2.477^{***}$ & $2.393^{***}$ & $2.792^{***}$ \\
+                      & $(0.093)$     & $(0.108)$     & $(0.139)$     \\
+y$>$=2                & $4.020^{***}$ & $3.776^{***}$ & $4.173^{***}$ \\
+                      & $(0.161)$     & $(0.161)$     & $(0.187)$     \\
+y$>$=3                & $5.299^{***}$ & $4.936^{***}$ & $5.331^{***}$ \\
+                      & $(0.254)$     & $(0.244)$     & $(0.263)$     \\
+Observed HRW, lag     & $1.662^{***}$ &               &               \\
+                      & $(0.114)$     &               &               \\
+Static  latent, lag   &               & $1.034^{***}$ &               \\
+                      &               & $(0.105)$     &               \\
+Dynamic latent, lag   &               &               & $1.041^{***}$ \\
+                      &               &               & $(0.107)$     \\
+\hline
+log-Likelihood        & -676.390      & -701.236      & -702.287      \\
+Num. obs.             & 1695          & 1695          & 1695          \\
+Corr. obs x predicted & 0.305         & 0.153         & 0.145         \\
+Corr. p-value         & 0.000         & 0.097         & 0.113         \\
+\hline
+\multicolumn{4}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$, $^{\cdot}p<0.1$}}
+\end{tabular}
+\caption{\emph{Human Rights Watch}: Ordinal logistic regression using the HRW human rights 
+       indicator as dependent variable. In the first model (``Observed Lag''), the predictor is a 1-year lag
+       of the observed HRW response variable. In the second model (``Static Latent Lag''), the predictor is a 1-year
+       lag of the static estimates of SVAC prevalence, using a multiple imputation procedure that averages across 1,000 draws
+        from the posterior distribution to account for the statistical uncertainty in the LVM estimates. 
+       In the third model (``Dynamic Latent Lag''), the predictor is a 1-yar lag of the dynamic latent 
+       estimates of SVAC prevalence, also using a multiple imputation procedure that averages across 1,000 draws. To assess
+       model performance, we compare the log-Likelihood across models, as well as, the Spearman rank
+       correlation coefficients between the dependent variable and the predicted values of each regression
+       model.}
+\label{xt-hrw}
+\end{center}
+\end{table}

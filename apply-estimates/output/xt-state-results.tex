@@ -1,0 +1,40 @@
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{l c c c }
+\hline
+ & Observed Lag & Static Latent Lag & Dynamic Latent Lag \\
+\hline
+y$>$=1                & $2.109^{***}$ & $1.588^{***}$ & $2.080^{***}$ \\
+                      & $(0.082)$     & $(0.082)$     & $(0.107)$     \\
+y$>$=2                & $4.106^{***}$ & $3.054^{***}$ & $3.547^{***}$ \\
+                      & $(0.148)$     & $(0.121)$     & $(0.146)$     \\
+y$>$=3                & $5.696^{***}$ & $4.154^{***}$ & $4.647^{***}$ \\
+                      & $(0.222)$     & $(0.168)$     & $(0.190)$     \\
+Observed USSD, lag    & $2.234^{***}$ &               &               \\
+                      & $(0.098)$     &               &               \\
+Static  latent, lag   &               & $1.263^{***}$ &               \\
+                      &               & $(0.091)$     &               \\
+Dynamic latent, lag   &               &               & $1.281^{***}$ \\
+                      &               &               & $(0.093)$     \\
+\hline
+log-Likelihood        & -954.230      & -1109.679     & -1109.658     \\
+Num. obs.             & 1746          & 1746          & 1746          \\
+Corr. obs x predicted & 0.467         & 0.284         & 0.281         \\
+Corr. p-value         & 0.000         & 0.000         & 0.000         \\
+\hline
+\multicolumn{4}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$, $^{\cdot}p<0.1$}}
+\end{tabular}
+\caption{\emph{U.S. State Department}: Ordinal logistic regression using the USSD human rights 
+       indicator as dependent variable. In the first model (``Observed Lag''), the predictor is a 1-year lag
+       of the observed USSD response variable. In the second model (``Static Latent Lag''), the predictor is a 1-year
+       lag of the static estimates of SVAC prevalence, using a multiple imputation procedure that averages across 1,000 draws
+        from the posterior distribution to account for the statistical uncertainty in the LVM estimates. 
+       In the third model (``Dynamic Latent Lag''), the predictor is a 1-yar lag of the dynamic latent 
+       estimates of SVAC prevalence, also using a multiple imputation procedure that averages across 1,000 draws. To assess
+       model performance, we compare the log-Likelihood across models, as well as, the Spearman rank
+       correlation coefficients between the dependent variable and the predicted values of each regression
+       model.}
+\label{xt-state}
+\end{center}
+\end{table}
