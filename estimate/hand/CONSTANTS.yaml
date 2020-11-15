@@ -1,0 +1,25 @@
+#estimate/hand/CONSTANTS.yaml
+
+N_total_obs: 2092
+
+prev_vecs:
+ - ai_prev
+ - hrw_prev
+ - state_prev
+
+# prev_colors <- c(rgb(1,0,0,.6),rgb(0,0,1,.7),rgb(1,1,0,.5))
+
+prev_colors:
+  - "#FF000099" #ai
+  - "#FFFF0080" #hrw
+  - "#0000FFB3" #state
+
+static_STAN_iter: 2000
+
+static_STAN_chains: 4
+
+dynamic_STAN_iter: 2000
+
+dynamic_STAN_chains: 4
+
+#end.

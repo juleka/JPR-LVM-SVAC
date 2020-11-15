@@ -38,7 +38,7 @@ aggregate_conflicts <- function(data=data) {
   print(str(actort2data))
   print(table(actort2data$actor, useNA = 'always'))
   
-  ##the ordering of the data is crucial for the panel_index_lag in the dynamic models:
+  ##the ordering of the data is crucial for setting the panel_index_lag in the dynamic models:
   actort2data <- actort2data[order(actort2data$conflictid_new, actort2data$actor, actort2data$year),]
   return(actort2data)
 }
