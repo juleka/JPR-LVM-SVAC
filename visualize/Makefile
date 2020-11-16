@@ -16,7 +16,8 @@ all: \
 		output/log-boxplot-estimate-dist.txt \
 		output/log-plot-estimates-by-conflict-actor.txt \
 		output/xt-corr-obs-est.tex \
-		output/tl-corr-obs-est-All-static.pdf
+		output/tl-corr-obs-est-All-static.pdf \
+		output/xt-alpha-beta-params.tex
 
 clean:
 	rm -f output/*
@@ -123,5 +124,13 @@ output/tl-corr-obs-est-All-static.pdf: \
 		--tl_corr_GOV_dynamic=output/tl-corr-obs-est-GOV-dynamic.pdf \
 		--tl_corr_REB_static=output/tl-corr-obs-est-REB-static.pdf \
 		--tl_corr_REB_dynamic=output/tl-corr-obs-est-REB-dynamic.pdf
+
+output/xt-alpha-beta-params.tex: \
+		src/xt-alpha-beta-params.Rnw \
+		../estimate/output/static-alphas-betas.Rdata \
+		../estimate/output/dynamic-alphas-betas.Rdata \
+		Makefile
+	Rscript -e "library(knitr); knit('src/xt-alpha-beta-params.Rnw')"
+	mv xt-alpha-beta-params.tex output/
 
 #end of Makefile.

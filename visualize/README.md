@@ -8,6 +8,8 @@ In **visualize**, we generate all figures and tables in the main article, and mo
 * __[plot-estimates-distribution.R]__: Figure 5(a-c) main article
 * __[plot-LVM-estimates-by-conflict-actor-type.R]__: Figure 7(a-d) main article, Figure 5(a-h) online appendix
 * __[relate-obs-estimates.R]__: Table II online appendix
-* __[relate-obs-est-over-time.R]__: Figures 6(a-b), 7(a-b), 8(a-b) online appendix
+* __[relate-obs-est-over-time.R]__: Figures 6(a-b), 7(a-b), 8(a-b)
+online appendix
+* __[xt-alpha-beta-params.Rnw]__: Table I online appendix
 
 

@@ -1,0 +1,155 @@
+\documentclass[12pt,letterpaper,leqno]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor} 
+\usepackage{tabularx}
+\renewcommand*\thetable{\Roman{table}}
+\usepackage{graphicx}
+
+\begin{document}
+<<echo=FALSE,eval=TRUE,warning=FALSE>>=
+load(file = "../../estimate/output/static-alphas-betas.Rdata")
+load(file = "../../estimate/output/dynamic-alphas-betas.Rdata")
+str(static_params)
+@
+
+\begin{table}[!h]
+\begin{tabular}{p{.5cm}p{2cm}p{1.5cm}p{4cm}p{1.5cm}p{4cm}}
+\hline
+Item &  & Static  & & Dynamic  & \\
+\hline 
+AI & & & & & \\ 
+ & $\beta$               & \Sexpr{format(static_params[['value']][['ai_beta']])} 
+                         & [\Sexpr{format(static_params[['value']][['ai_beta_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['ai_beta_upper']][[1]])}] 
+                         & \Sexpr{format(dynamic_params[['value']][['ai_beta']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['ai_beta_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['ai_beta_upper']][[1]])}]\\
+ & $\alpha_{1}$          & \Sexpr{format(static_params[['value']][['ai_alpha1']])} 
+                         & [\Sexpr{format(static_params[['value']][['ai_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['ai_alpha1_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['ai_alpha1']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['ai_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['ai_alpha1_upper']][[1]])}]\\
+ & $\alpha_{2}$          & \Sexpr{format(static_params[['value']][['ai_alpha2']])} 
+                         & [\Sexpr{format(static_params[['value']][['ai_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['ai_alpha2_upper']][[1]])}]
+                         & \Sexpr{format(dynamic_params[['value']][['ai_alpha2']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['ai_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['ai_alpha2_upper']][[1]])}]\\
+ & $\alpha_{3}$          & \Sexpr{format(static_params[['value']][['ai_alpha3']])} 
+                         & [\Sexpr{format(static_params[['value']][['ai_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['ai_alpha3_upper']][[1]])}]
+                         & \Sexpr{format(dynamic_params[['value']][['ai_alpha3']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['ai_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['ai_alpha3_upper']][[1]])}]\\
+ & $\alpha_{1}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_ai_alpha1']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_ai_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_ai_alpha1_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_ai_alpha1']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_ai_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_ai_alpha1_upper']][[1]])}]\\
+ & $\alpha_{2}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_ai_alpha2']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_ai_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_ai_alpha2_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_ai_alpha2']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_ai_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_ai_alpha2_upper']][[1]])}]\\
+ & $\alpha_{3}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_ai_alpha3']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_ai_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_ai_alpha3_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_ai_alpha3']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_ai_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_ai_alpha3_upper']][[1]])}]\\
+HRW & & & & & \\ 
+ & $\beta$               & \Sexpr{format(static_params[['value']][['hrw_beta']])} 
+                         & [\Sexpr{format(static_params[['value']][['hrw_beta_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['hrw_beta_upper']][[1]])}] 
+                         & \Sexpr{format(dynamic_params[['value']][['hrw_beta']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['hrw_beta_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['hrw_beta_upper']][[1]])}]\\
+ & $\alpha_{1}$          & \Sexpr{format(static_params[['value']][['hrw_alpha1']])} 
+                         & [\Sexpr{format(static_params[['value']][['hrw_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['hrw_alpha1_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['hrw_alpha1']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['hrw_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['hrw_alpha1_upper']][[1]])}]\\
+ & $\alpha_{2}$          & \Sexpr{format(static_params[['value']][['hrw_alpha2']])} 
+                         & [\Sexpr{format(static_params[['value']][['hrw_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['hrw_alpha2_upper']][[1]])}]
+                         & \Sexpr{format(dynamic_params[['value']][['hrw_alpha2']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['hrw_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['hrw_alpha2_upper']][[1]])}]\\
+ & $\alpha_{3}$          & \Sexpr{format(static_params[['value']][['hrw_alpha3']])} 
+                         & [\Sexpr{format(static_params[['value']][['hrw_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['hrw_alpha3_upper']][[1]])}]
+                         & \Sexpr{format(dynamic_params[['value']][['hrw_alpha3']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['hrw_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['hrw_alpha3_upper']][[1]])}]\\
+ & $\alpha_{1}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_hrw_alpha1']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_hrw_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_hrw_alpha1_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha1']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha1_upper']][[1]])}]\\
+ & $\alpha_{2}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_hrw_alpha2']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_hrw_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_hrw_alpha2_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha2']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha2_upper']][[1]])}]\\
+ & $\alpha_{3}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_hrw_alpha3']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_hrw_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_hrw_alpha3_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha3']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_hrw_alpha3_upper']][[1]])}]\\
+USSD & & & & & \\ 
+ & $\beta$               & \Sexpr{format(static_params[['value']][['state_beta']])} 
+                         & [\Sexpr{format(static_params[['value']][['state_beta_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['state_beta_upper']][[1]])}] 
+                         & \Sexpr{format(dynamic_params[['value']][['state_beta']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['state_beta_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['state_beta_upper']][[1]])}]\\
+ & $\alpha_{1}$          & \Sexpr{format(static_params[['value']][['state_alpha1']])} 
+                         & [\Sexpr{format(static_params[['value']][['state_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['state_alpha1_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['state_alpha1']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['state_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['state_alpha1_upper']][[1]])}]\\
+ & $\alpha_{2}$          & \Sexpr{format(static_params[['value']][['state_alpha2']])} 
+                         & [\Sexpr{format(static_params[['value']][['state_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['state_alpha2_upper']][[1]])}]
+                         & \Sexpr{format(dynamic_params[['value']][['state_alpha2']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['state_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['state_alpha2_upper']][[1]])}]\\
+ & $\alpha_{3}$          & \Sexpr{format(static_params[['value']][['state_alpha3']])} 
+                         & [\Sexpr{format(static_params[['value']][['state_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['state_alpha3_upper']][[1]])}]
+                         & \Sexpr{format(dynamic_params[['value']][['state_alpha3']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['state_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['state_alpha3_upper']][[1]])}]\\
+ & $\alpha_{1}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_state_alpha1']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_state_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_state_alpha1_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_state_alpha1']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_state_alpha1_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_state_alpha1_upper']][[1]])}]\\
+ & $\alpha_{2}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_state_alpha2']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_state_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_state_alpha2_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_state_alpha2']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_state_alpha2_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_state_alpha2_upper']][[1]])}]\\
+ & $\alpha_{3}$ (scaled) & \Sexpr{format(static_params[['value']][['sc_state_alpha3']])} 
+                         & [\Sexpr{format(static_params[['value']][['sc_state_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(static_params[['value']][['sc_state_alpha3_upper']])[[1]]}]
+                         & \Sexpr{format(dynamic_params[['value']][['sc_state_alpha3']])} 
+                         & [\Sexpr{format(dynamic_params[['value']][['sc_state_alpha3_lower']][[1]])}, 
+                         \Sexpr{format(dynamic_params[['value']][['sc_state_alpha3_upper']][[1]])}]\\
+\hline 
+\end{tabular}
+\caption{Estimates of $\alpha$ and $\beta$ parameters for static and dynamic models, respectively, with 95\% posterior  intervals in square brackets. We report the difficulty cut-point parameters $\alpha$ in raw and scaled form. Dividing the  item difficulty parameter $\alpha$ by its corresponding item discrimination parameter $\beta$, the  $\alpha$ parameters are transformed to the same scale of the latent variable $\theta$.
+}\label{tb:params:alpha:beta}
+\end{table}
+
+\end{document}

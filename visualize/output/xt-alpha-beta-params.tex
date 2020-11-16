@@ -1,0 +1,314 @@
+\documentclass[12pt,letterpaper,leqno]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor} 
+\usepackage{tabularx}
+\renewcommand*\thetable{\Roman{table}}
+\usepackage{graphicx}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## List of 2
+##  $ value  :List of 63
+##   ..$ state_beta           : num 2.29
+##   ..$ state_beta_upper     : Named num 2.7
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ state_beta_lower     : Named num 1.94
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ ai_beta              : num 2.72
+##   ..$ ai_beta_upper        : Named num 3.27
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ ai_beta_lower        : Named num 2.26
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ hrw_beta             : num 2.86
+##   ..$ hrw_beta_upper       : Named num 3.52
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ hrw_beta_lower       : Named num 2.34
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ state_alpha1         : num 2.35
+##   ..$ state_alpha1_upper   : Named num 2.7
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ state_alpha1_lower   : Named num 2.07
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ state_alpha2         : num 4.23
+##   ..$ state_alpha2_upper   : Named num 4.76
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ state_alpha2_lower   : Named num 3.8
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ state_alpha3         : num 5.54
+##   ..$ state_alpha3_upper   : Named num 6.19
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ state_alpha3_lower   : Named num 5
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ ai_alpha1            : num 3.41
+##   ..$ ai_alpha1_upper      : Named num 3.97
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ ai_alpha1_lower      : Named num 2.96
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ ai_alpha2            : num 5.67
+##   ..$ ai_alpha2_upper      : Named num 6.54
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ ai_alpha2_lower      : Named num 4.99
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ ai_alpha3            : num 7.69
+##   ..$ ai_alpha3_upper      : Named num 8.82
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ ai_alpha3_lower      : Named num 6.77
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ hrw_alpha1           : num 3.86
+##   ..$ hrw_alpha1_upper     : Named num 4.58
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ hrw_alpha1_lower     : Named num 3.29
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ hrw_alpha2           : num 5.96
+##   ..$ hrw_alpha2_upper     : Named num 6.98
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ hrw_alpha2_lower     : Named num 5.16
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ hrw_alpha3           : num 7.72
+##   ..$ hrw_alpha3_upper     : Named num 9.07
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ hrw_alpha3_lower     : Named num 6.68
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_state_alpha1      : num 1.03
+##   ..$ sc_state_alpha1_upper: Named num 1.13
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_state_alpha1_lower: Named num 0.936
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_state_alpha2      : num 1.86
+##   ..$ sc_state_alpha2_upper: Named num 2.03
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_state_alpha2_lower: Named num 1.7
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_state_alpha3      : num 2.43
+##   ..$ sc_state_alpha3_upper: Named num 2.67
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_state_alpha3_lower: Named num 2.21
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_ai_alpha1         : num 1.26
+##   ..$ sc_ai_alpha1_upper   : Named num 1.37
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_ai_alpha1_lower   : Named num 1.16
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_ai_alpha2         : num 2.09
+##   ..$ sc_ai_alpha2_upper   : Named num 2.28
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_ai_alpha2_lower   : Named num 1.92
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_ai_alpha3         : num 2.84
+##   ..$ sc_ai_alpha3_upper   : Named num 3.16
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_ai_alpha3_lower   : Named num 2.57
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_hrw_alpha1        : num 1.35
+##   ..$ sc_hrw_alpha1_upper  : Named num 1.47
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_hrw_alpha1_lower  : Named num 1.24
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_hrw_alpha2        : num 2.09
+##   ..$ sc_hrw_alpha2_upper  : Named num 2.29
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_hrw_alpha2_lower  : Named num 1.91
+##   .. ..- attr(*, "names")= chr "2.5%"
+##   ..$ sc_hrw_alpha3        : num 2.71
+##   ..$ sc_hrw_alpha3_upper  : Named num 3
+##   .. ..- attr(*, "names")= chr "97.5%"
+##   ..$ sc_hrw_alpha3_lower  : Named num 2.45
+##   .. ..- attr(*, "names")= chr "2.5%"
+##  $ visible: logi TRUE
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{table}[!h]
+\begin{tabular}{p{.5cm}p{2cm}p{1.5cm}p{4cm}p{1.5cm}p{4cm}}
+\hline
+Item &  & Static  & & Dynamic  & \\
+\hline 
+AI & & & & & \\ 
+ & $\beta$               & 2.715888 
+                         & [2.255081, 
+                         3.274117] 
+                         & 2.702199 
+                         & [2.106553, 
+                         3.438921]\\
+ & $\alpha_{1}$          & 3.411341 
+                         & [2.963686, 
+                         3.974997]
+                         & 4.411417 
+                         & [3.657559, 
+                         5.390759]\\
+ & $\alpha_{2}$          & 5.66774 
+                         & [4.987621, 
+                         6.540747]
+                         & 6.625229 
+                         & [5.697206, 
+                         7.827959]\\
+ & $\alpha_{3}$          & 7.694283 
+                         & [6.769976, 
+                         8.817999]
+                         & 8.617807 
+                         & [7.510923, 
+                         10.08572]\\
+ & $\alpha_{1}$ (scaled) & 1.259492 
+                         & [1.157571, 
+                         1.371644]
+                         & 1.640822 
+                         & [1.457964, 
+                         1.847532]\\
+ & $\alpha_{2}$ (scaled) & 2.093772 
+                         & [1.919042, 
+                         2.284822]
+                         & 2.469522 
+                         & [2.160176, 
+                         2.819551]\\
+ & $\alpha_{3}$ (scaled) & 2.843465 
+                         & [2.572907, 
+                         3.159246]
+                         & 3.21613 
+                         & [2.757968, 
+                         3.749637]\\
+HRW & & & & & \\ 
+ & $\beta$               & 2.858818 
+                         & [2.337903, 
+                         3.52337] 
+                         & 2.906723 
+                         & [2.21086, 
+                         3.788533]\\
+ & $\alpha_{1}$          & 3.85735 
+                         & [3.289639, 
+                         4.578554]
+                         & 5.008114 
+                         & [4.061527, 
+                         6.21576]\\
+ & $\alpha_{2}$          & 5.959675 
+                         & [5.161434, 
+                         6.983751]
+                         & 7.094677 
+                         & [5.942314, 
+                         8.550306]\\
+ & $\alpha_{3}$          & 7.720474 
+                         & [6.675978, 
+                         9.072498]
+                         & 8.844691 
+                         & [7.477782, 
+                         10.51611]\\
+ & $\alpha_{1}$ (scaled) & 1.353417 
+                         & [1.243493, 
+                         1.472202]
+                         & 1.732825 
+                         & [1.533255, 
+                         1.948944]\\
+ & $\alpha_{2}$ (scaled) & 2.092483 
+                         & [1.913181, 
+                         2.289234]
+                         & 2.459971 
+                         & [2.143372, 
+                         2.818658]\\
+ & $\alpha_{3}$ (scaled) & 2.711484 
+                         & [2.45118, 
+                         3.001472]
+                         & 3.069999 
+                         & [2.640441, 
+                         3.568843]\\
+USSD & & & & & \\ 
+ & $\beta$               & 2.289297 
+                         & [1.943375, 
+                         2.699231] 
+                         & 2.400197 
+                         & [1.909557, 
+                         2.984578]\\
+ & $\alpha_{1}$          & 2.351914 
+                         & [2.065556, 
+                         2.697614]
+                         & 3.337062 
+                         & [2.748241, 
+                         4.030721]\\
+ & $\alpha_{2}$          & 4.234634 
+                         & [3.802707, 
+                         4.756957]
+                         & 5.256362 
+                         & [4.543483, 
+                         6.08953]\\
+ & $\alpha_{3}$          & 5.54403 
+                         & [5.001568, 
+                         6.188276]
+                         & 6.58355 
+                         & [5.778969, 
+                         7.550908]\\
+ & $\alpha_{1}$ (scaled) & 1.029776 
+                         & [0.9356634, 
+                         1.128646]
+                         & 1.39493 
+                         & [1.240189, 
+                         1.569047]\\
+ & $\alpha_{2}$ (scaled) & 1.855096 
+                         & [1.703183, 
+                         2.027844]
+                         & 2.202167 
+                         & [1.951108, 
+                         2.487598]\\
+ & $\alpha_{3}$ (scaled) & 2.429484 
+                         & [2.214227, 
+                         2.674959]
+                         & 2.760715 
+                         & [2.410339, 
+                         3.162731]\\
+\hline 
+\end{tabular}
+\caption{Estimates of $\alpha$ and $\beta$ parameters for static and dynamic models, respectively, with 95\% posterior  intervals in square brackets. We report the difficulty cut-point parameters $\alpha$ in raw and scaled form. Dividing the  item difficulty parameter $\alpha$ by its corresponding item discrimination parameter $\beta$, the  $\alpha$ parameters are transformed to the same scale of the latent variable $\theta$.
+}\label{tb:params:alpha:beta}
+\end{table}
+
+\end{document}
