@@ -53,7 +53,8 @@ output/bp-prev-over-time.pdf: \
 output/log-barplot-SV-for-actor-type-by-conflict.txt: \
 		src/barplot-SV-for-actor-type-by-conflict.R \
 		../estimate/hand/CONSTANTS.yaml \
-		../clean/output/SVAC_main.csv
+		../clean/output/SVAC_main.csv \
+		Makefile
 	Rscript --vanilla $< \
 		--inputfile=../clean/output/SVAC_main.csv \
 		--CONSTANTS=../estimate/hand/CONSTANTS.yaml \
