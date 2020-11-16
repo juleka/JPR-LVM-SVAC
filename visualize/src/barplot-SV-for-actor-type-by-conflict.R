@@ -18,10 +18,7 @@ CONSTANTS <- yaml.load_file(arguments$CONSTANTS)
 
 sink(arguments$outputfile)
 data <- read.csv(arguments$inputfile, header = TRUE, sep = "|", stringsAsFactors = FALSE)
-str(data)
 stopifnot(length(unique(data$actor_type))==2)
-
-##barplot for gov and rebels separately, plus INTERSTATE wars
 
 ## ----------
 ##  plotting
@@ -29,16 +26,6 @@ stopifnot(length(unique(data$actor_type))==2)
 
 prev_vec <- CONSTANTS$prev_vecs
 prev_colors <- c(CONSTANTS$prev_colors[[1]], CONSTANTS$prev_colors[[2]], CONSTANTS$prev_colors[[3]])
-
-#FIXME: make x-axis labels by 5, starting from 1990
-# gsudan$year_lab <- rep("", nrow(gsudan))
-# gsudan$year_lab[gsudan$year==1990] <- 1990
-# gsudan$year_lab[gsudan$year==1995] <- 1995
-# gsudan$year_lab[gsudan$year==2000] <- 2000
-# gsudan$year_lab[gsudan$year==2005] <- 2005
-# gsudan$year_lab[gsudan$year==2010] <- 2010
-# gsudan$year_lab[gsudan$year==2015] <- 2015
-
 
 barplot_observed_values <- function(data) {
   
@@ -90,8 +77,6 @@ barplot_observed_values <- function(data) {
                       names.arg = subdata$year, col=prev_colors, 
                       ylab='Reported prevalence', xlab='', ylim=c(0,3), yaxt='n', las=2)
               axis(2, at=seq(0,3,1), labels = seq(0,3,1))
-              # axis(2, at=unique(sort(t(as.matrix(subdata[,c(prev_vec)])))))
-              # if (j==3) {
               if (j==3) {##set position of legend here 1: GOV, 3: REB
                   legend("topright", inset=c(-.15,0),
                      legend = c('AI', 'HRW', 'USSD'), fill = prev_colors, bty='n')
@@ -114,8 +99,6 @@ barplot_observed_values <- function(data) {
             subdata <- data[data$conflictid_new==i & data$actor==j,]
             subdata <- subdata[order(subdata$year),]
 
-            #print(str(subdata))
-            
             if(nrow(subdata)>0) {
               
               country.name <- unique(subdata$conflict_country)
@@ -144,7 +127,6 @@ barplot_observed_values <- function(data) {
                       names.arg = subdata$year, col=prev_colors, 
                       ylab='Reported prevalence', xlab='', axes=FALSE, las=2)
               axis(2, at=c(0,1,2,3), labels=c(0,1,2,3))
-              # axis(2, at=unique(sort(t(as.matrix(subdata[,c(prev_vec)])))))
               legend("topright", inset=c(-.15,0),
                       legend = c('AI', 'HRW', 'USSD'), fill = prev_colors, bty='n')
               dev.off()
