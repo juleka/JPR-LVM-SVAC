@@ -22,4 +22,9 @@ dynamic_STAN_iter: 2000
 
 dynamic_STAN_chains: 4
 
+conflicts_to_visualize:
+ - 283 #DRC
+ - 289 #Colombia
+ - 352 #Sri Lanka
+ - 389 #BiH
 #end.
